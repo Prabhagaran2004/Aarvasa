@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+.component {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+    background-color: #F5F0E1;
+    
+}
+
+.textforcard {
+    padding-left:3%;
+    max-width: 35%;
+    text-align: left;   
+    align-self: center;
+    margin-right: 2%;
+}
+.image{
+    max-width:65%;
+    text-align: left;
+    margin-left: 0;
+    padding-left: 0;  
+    
+   
+}
+.component img {
+    width: 80%;
+    height: 35% ;  
+    align-items: left; 
+    border-radius: 5%;
+    object-fit: cover;
+}
+
+.readmore {
+    display: inline-block;
+    padding: 10px 20px ;
+    background: #FFFCF2;
+    border-radius: 8%;
+    border: 2px solid #6C1E3C;
+    color: #6C1E3C;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    font-family: "Inter";
+    font-weight: 700;
+    font-size: medium;
+}
+
+.readmore:hover {   
+    background-color: #6C1E3C;
+    color: #FFFCF2;
+    transition: background-color 0.3s ease;
+}
+.heading{
+    font-family: "Poppins";
+    font-size: xx-large;
+    font-weight: 600;
+    text-align: left;
+
+}
+.textinside{
+    font-family: "Poppins";
+    font-size:larger;
+    font-weight: 500;
+}
+
+
+@media only screen and (max-width: 430px) {
+    .component {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .component img {    
+        width: 100%;
+        height: auto;
+    }
+
+    .textforcard {
+        text-align: center;
+        margin-right: 0;
+    }
+
+
+    
+}

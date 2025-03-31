@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <!-- Base background -->
+  <rect width="800" height="400" fill="#C1A57B"/>
+  
+  <!-- Bokeh circles with gradients -->
+  <defs>
+    <radialGradient id="bokeh1" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#F5F0E1" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="white" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="bokeh2" cx="30%" cy="10%" r="50%">
+      <stop offset="40%" stop-color="#F5F0E1" stop-opacity="0.75"/>
+      <stop offset="100%" stop-color="white" stop-opacity="0.3"/>
+    </radialGradient>
+    <radialGradient id="bokeh3" cx="50%" cy="90%" r="50%">
+      <stop offset="0%" stop-color="#F5F0E1" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="white" stop-opacity="0.3"/>
+    </radialGradient>
+    <filter id="blur">
+      <feGaussianBlur stdDeviation="8"/>
+    </filter>
+  </defs>
+  
+  <!-- Bokeh circles -->
+  <circle cx="200" cy="100" r="120" fill="url(#bokeh1)" filter="url(#blur)"/>
+  <circle cx="400" cy="150" r="100" fill="url(#bokeh2)" filter="url(#blur)"/>
+  <circle cx="600" cy="80" r="140" fill="url(#bokeh3)" filter="url(#blur)"/>
+</svg>

@@ -1,0 +1,285 @@
+.real-estate-guide {
+    padding: 4rem 2rem;
+    background-color: #F5F0E1;
+  }
+  
+.real-estate-guide h2 {
+    position: relative; /* Position relative to add the custom line */
+    margin-top:15px; /* Remove unnecessary space above */
+    margin-bottom: 10px; /* Add spacing below the header */
+    font-size: 2rem; /* Adjust font size as needed */
+    text-align: left; /* Align text to the left */
+    text-decoration: none; /* Remove any text underline */
+    border: none; /* Remove any extra border */
+    transform: translateX(+5px);
+  }
+  
+.real-estate-guide h2::after {
+    content: ""; /* Empty content for the custom line */
+    display: block;
+    width: 50px; /* Width of the line, matching the "Our" text length */
+    height: 4px; /* Thickness of the line */
+    background-color: #6C1E3C; /* Line color */
+    border-radius: 5px;
+    margin-top: 5px; /* Space between the text and the line */
+  }  
+
+  .guide-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .guide-card {
+    background: white;
+    border-radius: 1.5rem;
+    height: 320px;
+    padding: 1.5rem;
+    width: 30% mtdr;
+    
+    border-style:solid ;
+    border-color: #C1A57B;
+  }
+  
+  .guide-card h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  
+  .video-list {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+  .updates-list{
+    display: flex;
+    flex-direction: column;
+  }
+  .video-item, .update-item {
+    position: relative;
+  }
+  
+  .youtube-thumbnail {
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 0.5rem;
+  }
+  
+  .youtube-thumbnail:hover .play-overlay {
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+  
+  .youtube-thumbnail img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .youtube-thumbnail:hover img {
+    transform: scale(1.05);
+  }
+  
+  .play-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    border-radius: 50%;
+    padding: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    color: #6C1E3C;
+    transition: transform 0.3s ease;
+    z-index: 1;
+  }
+  
+  .insights-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .insight-item {
+    font-size: 6px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .insight-item:hover {
+    background-color: #f5f5f5;
+  }
+  
+  .insight-item svg {
+    width: 16px;
+    height: 16px;
+    color: #6C1E3C;
+    flex-shrink: 0;
+  }
+  
+  .doc-icon {
+    width: 16px;
+    height: 16px;
+    border: 1px solid #6C1E3C;
+    border-radius: 2px;
+    flex-shrink: 0;
+  }
+  
+  /* Rest of the CSS remains the same */
+  .card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+  }
+  
+  .pagination-dots {
+    display: flex;
+    gap: 0.25rem;
+  }
+  
+  .pagination-dots span {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background: #e0e0e0;
+  }
+  
+  .pagination-dots span.active {
+    background: #6C1E3C;
+  }
+  
+  .see-all {
+    color: #6C1E3C;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-size: 0.875rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+  
+  button.explore {
+    background: #6C1E3C;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .update-item h4 {
+    margin: 0.5rem 0;
+    font-weight: 500;
+  }
+  
+  .update-item button {
+    color: #6b2fb5;
+    background: none;
+    border: none;
+    padding: 0;
+    font-size: 0.875rem;
+    cursor: pointer;
+  }
+
+  @media only screen and (max-width: 430px) and (max-height: 932px) {
+    /* Real estate guide padding */
+    .real-estate-guide {
+        padding: 1rem 0.5rem; /* Thoda padding kam kiya gaya */
+    }
+
+    /* Header ko chhota kiya gaya */
+    .real-estate-guide h2 {
+        font-size: 1.4rem; /* Header size kam kiya gaya */
+        margin-top: 0;
+        transform: translateX(-50px); /* Header ko center kiya */
+    }
+
+    /* Guide container ko 3 cards ke liye adjust kiya gaya */
+    .guide-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 3 cards ko row-wise set kiya gaya */
+        gap: 1rem; /* Gap set kiya gaya cards ke beech */
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    /* Guide card ko 1/3rd width set kiya gaya */
+    .guide-card {
+        width: 100%; /* Full width within the grid column */
+        height: 220px; /* Card height ko thoda kam kiya gaya */
+        padding: 0.5rem; /* Padding ko kam kiya */
+        box-sizing: border-box; /* Padding ka effect card ke width par na ho */
+        border-radius: 1rem;
+        border-style: solid;
+        border-color: #C1A57B;
+        overflow: hidden; /* Overflows ko hide karne ke liye */
+    }
+
+    .guide-card h3 {
+        font-size: 0.9rem; /* Title ka font size reduce kiya gaya */
+        margin-bottom: 0.5rem;
+        font-weight: bold;
+    }
+
+    /* YouTube thumbnail ki size ko adjust kiya gaya */
+    .youtube-thumbnail img {
+        height: 70px; /* Thumbnail ki height kam ki gayi */
+        object-fit: cover; /* Image ko crop kiya gaya */
+    }
+
+    /* Pagination dots ko adjust kiya gaya */
+    .pagination-dots {
+        justify-content: center; /* Pagination ko center mein rakha */
+    }
+
+    .pagination-dots span {
+        width: 0.35rem;
+        height: 0.35rem; /* Pagination dots ko chhota kiya gaya */
+    }
+
+    /* Explore button ko bhi size mein adjust kiya gaya */
+    button.explore {
+        font-size: 0.25rem; /* Font size ko aur kam kiya */
+        padding: 0.15rem 0.3rem; /* Button ki padding ko reduce kiya */
+    }
+
+    /* Thumbnails aur overlay ko adjust kiya gaya */
+    .play-overlay {
+        padding: 0.2rem;
+        font-size: 0.3rem; /* Overlay text ko chhota kiya gaya */
+    }
+
+    /* Insight items ka size kam kiya gaya */
+    .insight-item {
+        font-size: 0.25rem; /* Font size chhota kiya */
+        padding: 0.2rem;
+    }
+
+    /* Guide card content ko compress kiya gaya */
+    .guide-card .content {
+        font-size: 0.05rem; /* Content ka font size reduce kiya */
+        overflow-y: auto; /* Agar content zyada ho toh scroll ho jaye */
+        height: calc(100% - 50px); /* Content ko card height ke andar fit kiya */
+    }
+
+    /* Guide card mein images aur paragraphs ko adjust kiya gaya */
+    .guide-card img, .guide-card p {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: cover; /* Image ko crop karne ke liye */
+        margin-bottom: 0.05rem;
+    }
+}
+
+

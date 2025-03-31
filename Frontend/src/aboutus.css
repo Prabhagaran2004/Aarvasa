@@ -1,0 +1,835 @@
+.about-section {
+  padding: 20px;
+  background-color: #F5F0E1;
+}
+
+/*Header*/
+.about-contentaboveheader h2 {
+  transform: translateX(+5px);
+  position: relative; /* Position relative to add the custom line */
+  margin-top: 25px; /* Remove unnecessary space above */
+  margin-bottom: 10px; /* Add spacing below the header */
+  font-size: 2rem; /* Adjust font size as needed */
+  text-align: left; /* Align text to the left */
+  text-decoration: none; /* Remove any text underline */
+  border: none; /* Remove any extra border */
+}
+
+.about-contentaboveheader h2::after {
+  content: ""; /* Empty content for the custom line */
+  display: block;
+  width: 50px; /* Width of the line, matching the "Our" text length */
+  height: 4px; /* Thickness of the line */
+  background-color: #6C1E3C; /* Line color */
+  border-radius: 5px;
+  margin-top: 5px; /* Space between the text and the line */
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.character-img {
+  width: 230px; /* Keep the image size consistent */
+  height: 280px; /* Keep the image size consistent */
+  margin-right: 20px;
+  transform: translateX(-100px);
+}
+
+.about-text {
+  background-color: #D6C1AA; /* Matching background color */
+  border-radius: 30px; /* Creates the oval shape */
+  padding: 20px; /* Add padding for text inside the oval */
+  color: #5A4636; /* Text color matches the uploaded design */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  flex: 1; /* Allow text to stretch and adjust within available space */
+  transform: translateX(-150px);
+}
+
+.about-text p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #6C1E3C; /* Text color design */
+  margin: 0;
+}
+
+.mission-hea h2 {
+  position: relative; /* Position relative to add the custom line */
+  margin-top: 25px; /* Remove unnecessary space above */
+  margin-bottom: 10px; /* Add spacing below the header */
+  text-align: center; /* Align text to the left */
+  text-decoration: none; /* Remove any text underline */
+  border: none; /* Remove any extra border */
+}
+
+.mission-vision {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: #F5F0E1;
+  padding: 20px 40px;
+  gap: 20px; /* The gap between the columns */
+}
+
+/* Left Column */
+.left-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* The gap between Mission and Vision cards */
+  width: 40%;
+}
+
+.mission, .vision {
+  background-color: #C1A57B;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  height: calc((100% - 20px) / 2); /* Each card gets half the height of the right column minus the gap */
+}
+
+.mission h3, .vision h3 {
+  background-color: #F5F0E1;
+  color: #6C1E3C;
+  padding: 5px 10px;
+  border-radius: 3px;
+  display: inline-block;
+}
+
+/* Right Column */
+.right-column {
+  width: 60%;
+}
+
+.center-card {
+  background-color: #C1A57B;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  height: 100%; /* Full height to match the combined height of the left column */
+}
+
+.center-card img {
+  width: 76%;
+  transform: translateY(+85px);
+  margin: 15px 0;
+  border-radius: 10px;
+}
+
+.center-card button {
+  background-color: #6C1E3C;
+  transform: translateY(-330px);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.center-card button:hover {
+  background-color: #4A1029;
+}
+
+/* Milestones */
+
+.milestones {
+  margin: 40px auto;
+  text-align: center;
+  max-width: 900px;
+  background-color: #f9f7ef;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.milestones-header h3 {
+  transform: translateX(+40px);
+  position: relative; /* Position relative to add the custom line */
+  margin-top: 25px; /* Remove unnecessary space above */
+  margin-bottom: 10px; /* Add spacing below the header */
+  font-size: 2rem; /* Adjust font size as needed */
+  text-align: left; /* Align text to the left */
+  text-decoration: none; /* Remove any text underline */
+  border: none; /* Remove any extra border */
+}
+
+.milestones-header h3::after {
+  content: ""; /* Empty content for the custom line */
+  display: block;
+  width: 50px; /* Width of the line, matching the "Our" text length */
+  height: 4px; /* Thickness of the line */
+  background-color: #6C1E3C; /* Line color */
+  border-radius: 5px;
+  margin-top: 5px; /* Space between the text and the line */
+}
+
+.timeline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.timeline-item {
+  position: relative;
+  text-align: center;
+  flex: 1;
+}
+
+.timeline-star {
+  margin-bottom: 10px;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+}
+
+.timeline-star svg {
+  width: 30px;
+  height: 30px;
+  fill: #d4a017;
+}
+
+.timeline-month {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.timeline-description {
+  font-size: 14px;
+  color: #555;
+}
+
+.timeline-connector {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 0;
+}
+
+.timeline-connector .dot {
+  width: 6px;
+  height: 6px;
+  background: #ccc;
+  border-radius: 80%;
+}
+
+.timeline-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.timeline-item:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  width: calc(100% - 30px);
+  height: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: repeating-linear-gradient(to right, #ccc 0, #ccc 8px, transparent 8px, transparent 16px);
+}
+
+.timeline-item:first-child::before {
+  display: none;
+}
+
+.timeline-item:last-child::after {
+  display: none;
+}
+
+/*Our Team*/
+.our-team {
+  text-align: left;  /* Align the "Our Team" title to the left */
+  margin-left: 20px;  /* Add left margin */
+  margin-bottom: 20px;
+}
+.our-team h2 {
+  transform: translateX(+5px);
+  position: relative; /* Position relative to add the custom line */
+  margin-top: 25px; /* Remove unnecessary space above */
+  margin-bottom: 10px; /* Add spacing below the header */
+  font-size: 2rem; /* Adjust font size as needed */
+  text-align: left; /* Align text to the left */
+  text-decoration: none; /* Remove any text underline */
+  border: none; /* Remove any extra border */
+}
+
+.our-team h2::after {
+  content: ""; /* Empty content for the custom line */
+  display: block;
+  width: 50px; /* Width of the line, matching the "Our" text length */
+  height: 4px; /* Thickness of the line */
+  background-color: #6C1E3C; /* Line color */
+  border-radius: 5px;
+  margin-top: 5px; /* Space between the text and the line */
+}
+
+.team-members {
+  display: flex;
+  justify-content: space-between;  /* Distribute the boxes equally */
+  gap: 10px;
+  margin-top: 10px;
+  width: 90%;  /* Set the width of the container to 80% */
+  margin-left: 5%;  /* Center the container by adding 10% margin on the left */
+  margin-right: 5%;  /* Center the container by adding 10% margin on the right */
+}
+
+.team-member {
+  width: 250px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #F5F0E1;
+  color: #6C1E3C;
+  font-size: 16px;
+  border: 3px solid #6C1E3C;
+  border-radius: 0;
+  transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+  transform: scale(1.05);
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.image-container img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.image-container:hover img {
+  transform: scale(1.1); /* Slight zoom effect */
+}
+
+.social-media-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.image-container:hover .social-media-container {
+  opacity: 1;
+}
+
+.social-icon {
+  color: #D4AF37;
+  margin: 0 10px;
+  text-decoration: none;
+  font-size: 1.5rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+  color: #0073b1; /* LinkedIn's blue color */
+}
+
+
+.info-container {
+  width: 100%;
+  height: 30%;
+  background-color: #C1A57B;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.name {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #6C1E3C 
+}
+
+.designation {
+  font-size: 14px;
+  color: black;
+}
+
+.mapsabove-header h1 {
+  transform: translateX(-35px);
+  position: relative; /* Position relative to add the custom line */
+  margin-top: 25px; /* Remove unnecessary space above */
+  margin-bottom: 10px; /* Add spacing below the header */
+  font-size: 2rem; /* Adjust font size as needed */
+  text-align: left; /* Align text to the left */
+  text-decoration: none; /* Remove any text underline */
+  border: none; /* Remove any extra border */
+}
+
+.mapsabove-header h1::after {
+  content: ""; /* Empty content for the custom line */
+  display: block;
+  width: 50px; /* Width of the line, matching the "Our" text length */
+  height: 4px; /* Thickness of the line */
+  background-color: #6C1E3C; /* Line color */
+  border-radius: 5px;
+  margin-top: 5px; /* Space between the text and the line */
+}
+
+/* Map Section */
+.aboutusmap-section {
+  padding: 2rem 1rem;
+  background-color: #222; /* Darker background for contrast */
+  border-radius: 15px;
+  margin: 2rem auto;
+  width: 85%; /* Slightly reduced width for a balanced layout */
+  margin-bottom: 6rem;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.7); /* Stronger shadow for depth */
+}
+
+.aboutusmap-section iframe {
+  border-radius: 15px;
+  filter: invert(85%); /* Dark mode effect */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5); /* Subtle shadow for the map */
+}
+
+/* Services Section */
+
+.formhead-container h3 {
+  transform: translateX(+40px);
+  position: relative; /* Position relative to add the custom line */
+  margin-top: 25px; /* Remove unnecessary space above */
+  margin-bottom: 10px; /* Add spacing below the header */
+  font-size: 2rem; /* Adjust font size as needed */
+  text-align: left; /* Align text to the left */
+  text-decoration: none; /* Remove any text underline */
+  border: none; /* Remove any extra border */
+}
+
+.formhead-container h3::after {
+  content: ""; /*Empty content for the custom line */
+  display: block;
+  width: 50px; /* Width of the line, matching the "Our" text length */
+  height: 4px; /* Thickness of the line */
+  background-color: #6C1E3C; /* Line color */
+  border-radius: 5px;
+  margin-top: 5px; /* Space between the text and the line */
+}
+
+.asserWhatclients h2 {
+  transform: translateX(+5px);
+  position: relative; /* Position relative to add the custom line */
+  margin-top: 35px; /* Remove unnecessary space above */
+  margin-bottom: 35px; /* Add spacing below the header */
+  font-size: 2rem; /* Adjust font size as needed */
+  text-align: left; /* Align text to the left */
+  text-decoration: none; /* Remove any text underline */
+  border: none; /* Remove any extra border */
+}
+
+.asserWhatclients h2::after {
+  content: ""; /* Empty content for the custom line */
+  display: block;
+  width: 50px; /* Width of the line, matching the "Our" text length */
+  height: 4px; /* Thickness of the line */
+  background-color: #6C1E3C; /* Line color */
+  border-radius: 5px;
+  margin-top: 5px; /* Space between the text and the line */
+}
+
+
+.aboutusserreviewcards{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-left: 3%;
+  width:90%;
+  scroll-behavior: smooth; 
+  gap: 1rem; 
+}
+
+.aboutusserconsultation {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* padding: 2rem; */
+  background-color: #C9B391;
+  border-radius: 30px;
+  width: 85%;
+  height: 30%;
+  margin: 0 auto;
+  gap: 2rem;
+  margin-bottom: 40px;
+}
+
+.aboutussercontent {
+  display: flex;
+  width: 100%;
+  height:min-content;
+  align-items:center;
+  gap: 2%;
+}
+
+.aboutusserimage{
+  flex:30%;
+  width: 100%;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.aboutusserimage img {
+  border-radius: 16px;
+  max-height: 20%;
+  width: 70%;
+  margin-left: 2%;
+  margin-right: 0;
+}
+
+.aboutusserform-container {
+  flex: 1;
+  width: 90%;
+  height: 40%;
+  align-items: left;
+}
+
+form {
+  display: flex;
+  width: 90%;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+label{ 
+  width: 90%;
+  font-family: "Inter";
+  font-size: medium;
+  font-weight: bold;
+  color: #8b0000;
+}
+
+input {
+  width: 90%;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+}
+
+input:focus {
+  border-color: #6c1e3c;
+}
+
+button {
+  background-color: #6c1e3c;
+  color: #fff;
+  width: fit-content;
+  padding: 0.6rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #500f2c;
+}
+
+/* Footer Section */
+.footerapp {
+  display: flex;
+  justify-content: space-around;
+  padding: 2rem;
+  background-color: #6C1E3C;
+  color: #C1A57B;
+}
+
+.footer-top {
+  padding-bottom: 40px;
+}
+
+.footerapp-section h3 {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  position: relative;
+  color: #fff;
+}
+
+.footerapp-section h3.underlinedapp::after {
+  content: '';
+  display: block;
+  width: 20%;
+  height: 2px;
+  background-color: #D4AF37;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+}
+
+.footerapp-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footerapp-section ul li {
+  margin: 0.5rem 0;
+  color: #fff;
+}
+
+.footerapp-section p {
+  margin: 0.5rem 0;
+  color: #fff;
+}
+
+/* Oval background for logos */
+.oval-bg {
+  background-color: #C1A57B;
+  border-radius: 1rem; /* Make it oval */
+  padding: 0.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+
+.logon-image {
+  width: 200px;
+  height: auto;
+  margin: 0 0.5rem;
+}
+
+@media (max-width: 430px) and (max-height: 932px) {
+  .milestones {
+    margin: 20px auto; /* Reduce margin for smaller screens */
+    padding: 15px; /* Adjust padding for compact spacing */
+    max-width: 95%; /* Use most of the screen width */
+    border-radius: 8px; /* Slightly smaller rounded corners */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .milestones-header h3 {
+    font-size: 1.5rem; /* Adjust font size for small screens */
+    margin-top: 15px;
+    margin-bottom: 8px;
+  }
+
+  .milestones-header h3::after {
+    width: 40px; /* Adjust width of the underline */
+    height: 3px; /* Adjust thickness */
+  }
+
+  .timeline {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center-align items */
+  }
+
+  .timeline-item {
+    flex: none; /* Prevent stretching */
+    text-align: center;
+    margin-bottom: 20px; /* Add spacing between items */
+  }
+
+  .timeline-star svg {
+    width: 25px; /* Smaller icon size */
+    height: 25px;
+  }
+
+  .timeline-month {
+    font-size: 14px; /* Adjust font size */
+    margin-bottom: 4px;
+  }
+
+  .timeline-description {
+    font-size: 13px; /* Reduce text size for better fit */
+  }
+
+  .timeline-connector {
+    position: absolute;
+    height: 6px; /* Reduce connector thickness */
+    top: auto; /* Adjust positioning */
+    left: 0;
+    right: 0;
+  }
+
+  .timeline-connector .dot {
+    width: 4px; /* Smaller dots */
+    height: 4px;
+  }
+
+  .timeline-item:not(:last-child)::after {
+    top: auto; /* Prevent overlap in stacked layout */
+    left: 50%; /* Center the connector */
+    width: 2px; /* Vertical line for stacked layout */
+    height: 20px; /* Length of the vertical connector */
+    background-color: #ccc;
+    transform: translateX(-50%);
+  }
+
+  .timeline-item:first-child::before,
+  .timeline-item:last-child::after {
+    display: none; /* Hide connectors for start/end items */
+  }
+}
+
+@media screen and (max-width: 430px) and (max-height: 932px) {
+  .team-members {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: center; /* Center-align the items */
+    gap: 15px; /* Slightly increased spacing for better layout */
+  }
+
+  .team-member {
+    flex: 1 1 calc(45% - 15px); /* Increase card width to 45% of container */
+    max-width: calc(45% - 15px); /* Ensure it doesn't exceed this width */
+    height: auto; /* Let the height adjust dynamically */
+    min-width: 140px; /* Slightly increased minimum width */
+    padding: 10px; /* Add padding to ensure content fits */
+  }
+
+  .image-container {
+    height: 180px; /* Adjust height for better proportion */
+  }
+
+  .image-container img {
+    object-fit: cover; /* Keep images proportional */
+    width: 100%;
+    height: 100%;
+  }
+
+  .info-container {
+    padding: 12px; /* Add padding for better spacing */
+    text-align: center;
+    background-color: #C1A57B; /* Retain background color */
+    color: black;
+    width: 95%;
+    transform: translateY(+10px);
+  }
+
+  .name {
+    font-size: 16px; /* Adjusted for better readability */
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #6c1e3c8c;
+  }
+
+  .designation {
+    font-size: 13px; /* Adjusted font size for smaller screens */
+    line-height: 1.2; /* Added line-height for readability */
+  }
+}
+
+/* Responsive Styles for 430x932 */
+@media (max-width: 430px) and (max-height: 932px) {
+  .about-section {
+    padding: 10px; /* Reduce padding for smaller screens */
+  }
+
+  .about-contentaboveheader h2 {
+    font-size: 1.5rem; /* Smaller font size for header */
+    transform: translateX(0); /* Center the header */
+    margin-top: 15px; /* Adjust spacing */
+  }
+
+  .about-contentaboveheader h2::after {
+    width: 30px; /* Reduce line width */
+    height: 3px; /* Adjust line thickness */
+  }
+
+  .about-content {
+    flex-direction: row; /* Stack image and text vertically */
+    align-items: center; /* Center-align items */
+    max-width: 97%; /* Full width for smaller screens */
+    margin: 10px 0; /* Reduce margins */
+  }
+
+  .character-img {
+    width: 70px; /* Reduce image size */
+    height: 130px;
+    transform: translateX(0); /* Center-align image */
+    margin-bottom: 10px; /* Add spacing below the image */
+  }
+
+  .about-text {
+    transform: translateX(0); /* Center-align text */
+    padding: 15px; /* Adjust padding for text */
+    font-size: 14px; /* Smaller text size */
+  }
+
+  .about-text p {
+    font-size: 14px; /* Smaller font size for paragraph */
+    line-height: 1.5; /* Adjust line spacing */
+  }
+
+  .mission-vision {
+    flex-direction: column; /* Stack left and right columns vertically */
+    padding: 10px 15px; /* Adjust padding */
+    gap: 15px; /* Adjust gap between elements */
+  }
+
+  .left-column,
+  .right-column {
+    width: 100%; /* Full width for both columns */
+  }
+
+  .mission,
+  .vision {
+    height: auto; /* Let height adjust naturally */
+    padding: 15px; /* Adjust padding */
+  }
+
+  .mission h3,
+  .vision h3 {
+    font-size: 16px; /* Adjust header size */
+    padding: 3px 8px; /* Adjust padding */
+  }
+
+  .center-card {
+    padding: 15px; /* Adjust padding */
+    height: auto; /* Let height adjust naturally */
+  }
+
+  .center-card img {
+    width: 100%; /* Full width for image */
+    transform: translateY(0); /* Center-align image */
+    margin: 10px 0; /* Adjust spacing */
+  }
+
+  .center-card button {
+    transform: translateY(0); /* Reset button position */
+    padding: 8px 15px; /* Adjust button size */
+    font-size: 12px; /* Smaller button text */
+  }
+}

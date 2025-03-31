@@ -1,0 +1,366 @@
+body {
+  background-color: #F5F0E1;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.containera {
+  display: flex;
+  flex-direction: column;
+  background-color: #F5F0E1;
+  min-height: 100vh;
+  padding: 0;
+  margin: 0 auto;
+}
+
+.agents-page {
+  background-color: #F5F0E1;
+  margin: 0;
+  padding: 20px;
+  
+  font-family: Arial, sans-serif;
+  margin-bottom: 300px;
+}
+.agents-page2{
+  margin-top: 70px;
+  background-color: #F5F0E1;
+  margin: 0;
+  padding: 20px;
+ 
+  font-family: Arial, sans-serif;
+}
+.agents-page3{
+  margin-top: 70px;
+  background-color: #F5F0E1;
+  margin: 0;
+  padding: 20px;
+  
+  font-family: Arial, sans-serif;
+}
+
+.agents-heading h2 {
+  transform: translateX(-55px);
+  position: relative; /* Position relative to add the custom line */
+  margin-top: 25px; /* Remove unnecessary space above */
+  margin-bottom: 10px; /* Add spacing below the header */
+  font-size: 2rem; /* Adjust font size as needed */
+  text-align: left; /* Align text to the left */
+  text-decoration: none; /* Remove any text underline */
+  border: none; /* Remove any extra border */
+}
+
+.agents-heading h2::after {
+  content: ""; /* Empty content for the custom line */
+  display: block;
+  width: 50px; /* Width of the line, matching the "Our" text length */
+  height: 4px; /* Thickness of the line */
+  background-color: #6C1E3C; /* Line color */
+  border-radius: 5px;
+  margin-top: 5px; /* Space between the text and the line */
+}
+
+.agents-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.agent-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  display: flex;
+  padding-right: 200px;
+  border-radius: 8px;
+  width: 1130px;
+  transform: translateX(-50px);
+  height: 240px;
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.agent-header {
+  display: flex;
+  gap: 10px;
+  width: 560px;
+  font-size: 17px;
+  margin-bottom: 10px;
+}
+.agent-header img{
+  width:100px;
+  height: 80px;
+}
+.agent-logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.agent-details p {
+  margin: 5px 0;
+}
+
+.agent-actions {
+  background-color:rgb(202, 199, 199);
+  height: 260px;
+  width: 430px;
+  transform: translateX(-100px);
+  display: flex;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(-9px );
+  margin-left: 0px;
+}
+
+.contact-button, .details-button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 35px;
+  cursor: pointer;
+  width: 160px;
+  font-size: 14px;
+  margin-top: 10px;
+}
+.certificate{
+  width:870px;
+  margin-top:80px;
+  transform: translateX(-200px);
+}
+.contact-button {
+  background-color: #6C1E3C;
+  color: #fff;
+}
+
+.details-button {
+  background-color: #f2f2f2;
+  color:#6C1E3C ;
+  border-style: solid;
+  border-color: #6C1E3C;
+}
+
+.contact-button:hover {
+  background-color: #5c2bcc;
+}
+
+.details-button:hover {
+  background-color: #e0e0e0;
+}
+.localities-section {
+  display: flex;
+  flex-direction: column;
+  margin: 20px auto;
+  border-radius: 1.5rem;
+  width: 1130px;
+  background-color: whitesmoke;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.localities-section h2 {
+  font-size: 24px;
+  font-weight: bold;
+  border-style: none;
+}
+
+.view-overview-btn {
+  background-color:#fff ;
+  color:#6C1E3C ;
+  padding: 10px 20px ;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  width: 200px;
+  height:38px;
+  font-size: 12px;
+  border-style: solid;
+}
+
+.localities-container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.localities-card {
+  border: 1px solid #6C1E3C;
+  border-radius: 10px;
+  padding: 20px;
+  width: 100%;
+  max-width: 400px;
+}
+.localities-card2 {
+  border: 1px solid #6C1E3C;
+  border-radius: 10px;
+  padding: 20px;
+  width: 100%;
+  max-width: 400px;
+  margin-left: 30px;
+}
+.localities-card h3 {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.localities-card p {
+  font-size: 14px;
+  color: #666;
+}
+
+.locality-item {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 0;
+  align-items: center;
+}
+
+.locality-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.locality-name {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.price-range {
+  font-size: 14px;
+  color: #666;
+}
+
+.locality-stats {
+  text-align: right;
+}
+
+.searches {
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.view-projects-link {
+  font-size: 14px;
+  color: #a94545;
+  text-decoration: none;
+}
+
+.view-all-localities {
+  display: block;
+  margin-top: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: #a94545;
+  text-decoration: none;
+}
+
+/* Compact Styles for 430px Width x 932px Height */
+@media screen and (max-width: 430px) and (max-height: 932px) {
+  .containera {
+    padding: 5px;
+    min-height: 100vh;
+  }
+
+  .agents-page, .agents-page2, .agents-page3 {
+    
+    transform: translateX(+40px);
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+
+  h2 {
+    font-size: 16px;
+    margin-left: 5px;
+    margin-bottom: 10px;
+    border-bottom-width: 1px;
+  }
+
+  .agents-list {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .agent-card {
+    width: 100%;
+    height: auto;
+    padding: 5px;
+    flex-direction: column;
+    box-shadow: none;
+  }
+
+  .agent-header {
+    flex-direction: column;
+    gap: 5px;
+    font-size: 14px;
+  }
+
+  .agent-header img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .agent-actions {
+    width: 100%;
+    height: auto;
+    margin: 5px 0;
+    padding: 5px;
+  }
+
+  .contact-button, .details-button {
+    width: 100%;
+    font-size: 12px;
+    margin-top: 5px;
+    padding: 8px;
+  }
+
+  .certificate {
+    width: 70%;
+    transform: translateX(+30px);
+    margin-top: 10px;
+  }
+
+  .localities-section {
+    width: 100%;
+    padding: 10px;
+    transform: translateX(-5px);
+    margin-top: 10px;
+  }
+
+  .localities-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .localities-card, .localities-card2 {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .view-overview-btn {
+    width: 100%;
+    font-size: 8px;
+    transform: translateX(5px);
+    padding: 8px;
+    height: auto;
+  }
+
+  .locality-item {
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 10px 0;
+  }
+
+  .locality-stats {
+    text-align: left;
+  }
+
+  .view-all-localities {
+    font-size: 12px;
+  }
+}

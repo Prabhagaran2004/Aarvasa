@@ -1,0 +1,1248 @@
+/* General resets */
+/* General Background */
+body {
+  background-color: #F5F0E1;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* General Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #F5F0E1;
+}
+
+.containera {
+  display: flex;
+  flex-direction: column;
+  background-color: #F5F0E1;
+  min-height: 100vh;
+  padding: 0;
+  margin: 0 auto;
+}
+
+
+/* Hero Section */
+.hero {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+  padding: 2rem;
+  background-color: #1d1919;
+  border-radius: 30px;
+  width: 90%;
+  height: 400px;
+  margin: 0 auto;
+  position: relative; /* Make it possible to position clouds */
+  overflow: hidden; /* Ensure clouds don't overflow the hero section */
+}
+
+.hero-content {
+  max-width: 50%;
+  color: #fff;
+}
+
+.hero h1 {
+  font-size: 3rem;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+.button {
+  border-radius: 50px;
+  color: purple;
+}
+
+.input {
+  border-radius: 30px;
+  width: 30px;
+}
+
+.select {
+  width: 100px;
+  height: 40px;
+}
+
+.hero-image img {
+  transform: translateY(20px);
+  margin-left: 5.5%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+/* Cloud Styling */
+.cloud {
+  position: absolute;
+  fill: #cfcfcf; /* Greyish color */
+  opacity: 0.2; /* Reduced opacity for a softer look */
+  animation: float 10s ease-in-out infinite;
+}
+
+/* Animation for floating clouds */
+@keyframes float {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+
+/* USP Section Styling */
+.usp {
+  text-align: center;
+  padding: 50px 0;
+  background-color: #F5F0E1;
+}
+
+.usp h2 {
+  position: relative; /* Position relative to add the custom line */
+  margin-top: 28px; /* Remove unnecessary space above */
+  margin-bottom: 8px; /* Add spacing below the header */
+  font-size: 2rem; /* Adjust font size as needed */
+  text-align: left; /* Align text to the left */
+  text-decoration: none; /* Remove any text underline */
+  border: none; /* Remove any extra border */
+  transform: translateX(+15px);
+}
+
+.usp h2::after {
+  content: ""; /* Empty content for the custom line */
+  display: block;
+  width: 50px; /* Width of the line, matching the "Our" text length */
+  height: 4px; /* Thickness of the line */
+  background-color: #6C1E3C; /* Line color */
+  border-radius: 5px;
+  margin-top: 5px; /* Space between the text and the line */
+}
+
+.usp-stats {
+  display: flex;
+  justify-content: space-between;
+  gap: 2%; /* Adds 4% margin between the boxes */
+  padding: 0 2%; /* Adds 4% margin to the left and right */
+}
+
+.stat-item {
+  text-align: left;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 0; /* Remove padding to make image fully fit the box */
+  border-radius: 12px; /* Slightly rounded corners */
+  width: 27%; /* Fixed width for each box */
+  height: 238px; /* Fixed height for all boxes */
+  flex-direction: column; /* Stack paragraphs vertically */
+  justify-content: center; /* Vertically center the content */
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden; /* Prevents image overflow */
+}
+
+.stat-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures image fills the box fully without distortion */
+}
+
+.stat-item h3 {
+  margin: 0;
+  padding: 5px 20px;  /* Added horizontal padding to ensure text aligns to the left */
+  color: #fff;         /* White text for better contrast */
+  text-align: left;    /* Align text to the left */
+  position: absolute;
+  top: 50%;
+  left: 10%;  /* Adjust this value as necessary to fine-tune left alignment */
+  transform: translateY(-50%);  /* Vertically center text */
+  width: 80%;  /* Set width to control the text box */
+  box-sizing: border-box;
+  line-height: 1.4;  /* Adds space between lines of text */
+  overflow: hidden;
+}
+
+.stat-item h3:first-child {
+  font-size: 1.5rem;
+  transform: translateY(-28px);
+}
+
+.stat-item h3:nth-child(2) {
+  font-size: 1rem;
+  transform: translateY(+1px);
+}
+
+.stat-item h3:last-child {
+  font-size: 1.5rem;
+  transform: translateY(+7px);
+}
+.stat-item h3.explore-link {
+  font-size: 1rem; /* Smaller font size for the link */
+  color: #fff; /* Use a distinct color for the link */
+  text-align: left; /* Align text to the left */
+  margin-top: 10px; /* Add spacing above the link */
+  text-decoration: none; /* Remove underline */
+  cursor: pointer; /* Show pointer cursor on hover */
+}
+
+.stat-item h3.explore-link:hover {
+  text-decoration: underline; /* Add underline on hover for better UX */
+}
+
+.stat-item a {
+  display: block; /* Make the entire box clickable */
+  text-decoration: none; /* Remove the underline for links */
+  color: inherit; /* Inherit text color */
+  width: 50%;
+  height: 50%;
+  position: relative;
+  overflow: hidden;
+}
+
+.stat-item a:hover {
+  text-decoration: underline; /* Add underline on hover if needed */
+}
+
+
+/* Agents Section */
+.agents {
+  padding: 20px;
+  background-color: #F5F0E1;
+  text-align: center;
+}
+
+.agents h2 {
+  transform: translateX(-35px);
+  position: relative; /* Position relative to add the custom line */
+  margin-top: 28px; /* Remove unnecessary space above */
+  margin-bottom: 8px; /* Add spacing below the header */
+  font-size: 2rem; /* Adjust font size as needed */
+  text-align: left; /* Align text to the left */
+  text-decoration: none; /* Remove any text underline */
+  border: none; /* Remove any extra border */
+  transform: translateX(+5px);
+}
+
+.agents h2::after {
+  content: ""; /* Empty content for the custom line */
+  display: block;
+  width: 50px; /* Width of the line, matching the "Our" text length */
+  height: 4px; /* Thickness of the line */
+  background-color: #6C1E3C; /* Line color */
+  border-radius: 5px;
+  margin-top: 5px; /* Space between the text and the line */
+}
+
+.agent-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.agent-cardp {
+  display: flex;
+  flex-direction: column;
+  width: 285px; /* Card Width */
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.card-row {
+  display: flex;
+  align-items:flex-start;
+  padding: 10px 15px;
+  border-bottom: 1px solid #ddd;
+  justify-content: flex-start;
+}
+
+.first-row {
+  justify-content: space-between;
+  background-color:#d9d9d9;
+}
+
+.agent-photo {
+  width: 50px;
+  height: 50px;
+}
+
+.agent-headerapp {
+  flex: 1;
+  text-align: center;
+}
+
+.agent-headerapp h3 {
+  font-size: 12px;
+  color: #d4a017; /* Gold for "Av Preferred" */
+  margin: 0;
+}
+
+.agent-headerapp h4 {
+  font-size: 16px;
+  color: #333;
+  margin: 5px 0 0;
+}
+
+.badge-logo {
+  width: 30px;
+  height: auto;
+}
+
+.second-row {
+  justify-content: space-between;
+}
+
+.propertyapp-info {
+  display: flex;
+  align-items: center;
+}
+
+.propertyapp-logo {
+  width: 40px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.propertyapp-details p {
+  margin: 0;
+  font-size: 12px;
+  color: #555;
+}
+
+.divider {
+  width: 1px;
+  height: 50px;
+  background-color: #ddd;
+  margin: 0 10px;
+}
+
+.buyers-info {
+  text-align: right;
+}
+
+.buyers-info p {
+  margin: 0;
+  font-size: 12px;
+  color: #555;
+}
+
+.third-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 15px;
+  font-size: 14px;
+  color: #333;
+}
+
+.projects h3 {
+  margin-bottom: 5px; /* Reduce the space below h3 */
+  font-weight: normal;
+}
+
+.projects h2 {
+  transform: translateX(+2px);
+  position: relative; /* Position relative to add the custom line */
+  margin-top: 0; /* Remove unnecessary space above */
+  margin-bottom: 20px; /* Add spacing below the header */
+  font-size: 2rem; /* Adjust font size as needed */
+  text-align: left; /* Align text to the left */
+  text-decoration: none; /* Remove any text underline */
+  border: none; /* Remove any extra border */
+}
+
+.projects h2::after {
+  content: ""; /* Empty content for the custom line */
+  display: block;
+  width: 50px; /* Width of the line, matching the "Our" text length */
+  height: 4px; /* Thickness of the line */
+  background-color: #6C1E3C; /* Line color */
+  border-radius: 5px;
+  margin-top: 5px; /* Space between the text and the line */
+}
+
+.projects {
+  padding: 50px 20px;
+  background-color: #F5F0E1; /* Set background color to white */
+}
+
+.project-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Create 3 columns */
+  gap: 20px; /* Space between cards */
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column; /* Stack image on top of text */
+  background-color: #fff;
+  border-radius: 0;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1); /* Optional: for better card appearance */
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column; /* Stack image on top of text */
+  background-color: #fff;
+  border-radius: 1.5rem;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1); /* Optional: for better card appearance */
+}
+
+.project-image {
+  width: 100%; /* Take full width */
+  height: 70;
+  padding-bottom: 70%; /* Square ratio for the image */
+  position: relative;
+}
+
+.project-image img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-text {
+  width: 100%; /* Full width for text */
+  padding: 20px; /* Space between image and text */
+}
+
+.project-text h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.project-text p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.project-text span {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/*Bachelor's*/
+.Bachelor {
+  display: flex;
+  flex-direction: column;
+  font-size: 30px;
+  text-align: left;
+  padding: 2rem; /* Increased padding for more height */
+  background-image: url('./background.svg');
+  -webkit-backdrop-filter: blur(10px); /* Apply a blur effect for the background */
+  backdrop-filter: blur(10px); /* Safari/iOS support */
+  border-radius: 30px; /* Rounded corners like navbar */
+  width: 90%;
+  height: 400px; /* Centralized and responsive */
+  margin: 0 auto;
+  font-weight: normal; /* Remove bold styling */
+}
+
+.bac-box {
+  height: 390px;
+  border-style: solid;
+  border-color: #D4AF37;
+  border-radius: 40px;
+}
+
+.Bachelor p {
+  font-size: 25px;
+  font-family: sans-serif;
+  margin-left: 180px;
+  margin-bottom: 0%;
+}
+
+.secnd-line {
+  font-family: sans-serif;
+  margin-left: 180px;
+  margin-bottom: 20px;
+}
+
+.third-line {
+  font-family: sans-serif;
+  display: flex;
+}
+
+.bold {
+  font-family: sans-serif;
+  margin-left: 5px;
+  font-weight: normal; /* Remove bold styling */
+}
+
+.Bachelor a {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  color: #6C1E3C;
+}
+
+.Bachelor strong {
+  display: inline; /* Display strong text inline */
+  justify-content: center;
+  margin-bottom: 25px;
+  font-size: 60px;
+}
+
+.itali {
+  color: #6C1E3C;
+  font-style: italic;
+  display: inline; /* Ensure 'also..' stays on the same line */
+}
+
+.explore-link {
+  text-decoration: none; /* Remove underline */
+  color: #6C1E3C; /* Optional: Keep the text color */
+}
+
+.highlight {
+  font-size: 35px; /* Slightly larger font size for 'Aarvasa' */
+  position: relative; /* Fine-tune its alignment */
+  top: -9px; /* Adjust this value to align perfectly with 'with' */
+  margin-left: 10px; /* Space between 'with' and 'Aarvasa' */
+}
+
+/* Newsletter Section */
+.appnewsletter {
+  display: flex;
+  gap: 20px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+  background-image: linear-gradient(90deg, #3B2F2F, #C1A57B);
+  border-radius: 30px;
+  width: 88.5%;
+  height: 325px;
+  margin: 0 auto;
+  margin-bottom: 150px;
+}
+
+.appcontent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.apptext {
+  color: #fff;
+  flex: 1;
+  max-width: 500px;
+}
+
+.apptext strong {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.apptext p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.apptext form {
+  display: flex;
+  flex-wrap: nowrap; /* Prevents wrapping */
+  align-items: center; /* Ensures vertical alignment */
+  justify-content: flex-start; /* Aligns items to the left */
+  gap: 15px; /* Space between input and button */
+  margin-top: 20px;
+}
+
+.apptext input {
+  padding: 12px 20px;
+  font-size: 16px;
+  border: 1px solid #ddd; /* Subtle border for input */
+  border-radius: 30px;
+  flex: 1; /* Allows the input to grow naturally */
+  max-width: 300px; /* Prevents input from becoming too large */
+  outline: none;
+  box-sizing: border-box; /* Includes padding in width/height calculations */
+}
+
+.apptext button {
+  padding: 12px 30px;
+  font-size: 16px;
+  background-color: #6C1E3C;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  white-space: nowrap; /* Prevents text from wrapping */
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.apptext button:hover {
+  background-color: #500f2c; /* Darker background on hover */
+}
+
+
+.appimage img {
+  margin-left: 20px;
+  height: 70%;
+  border-radius: 8px;
+  transform: translateX(+45px);
+}
+
+/* Footer Section */
+.footerapp {
+  display: flex;
+  justify-content: space-around;
+  padding: 2rem;
+  background-color: #6C1E3C;
+  color: #C1A57B;
+}
+
+.footer-top {
+  padding-bottom: 40px;
+}
+
+.footerapp-section h3 {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  position: relative;
+  color: #fff;
+}
+
+.footerapp-section h3.underlinedapp::after {
+  content: '';
+  display: block;
+  width: 20%;
+  height: 2px;
+  background-color: #D4AF37;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+}
+
+.footerapp-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footerapp-section ul li {
+  margin: 0.5rem 0;
+  color: #fff;
+}
+
+.footerapp-section p {
+  margin: 0.5rem 0;
+  color: #fff;
+}
+
+/* Oval background for logos */
+.oval-bg {
+  background-color: #C1A57B;
+  border-radius: 1rem; /* Make it oval */
+  padding: 0.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+
+.logon-image {
+  width: 200px;
+  height: auto;
+  margin: 0 0.5rem;
+}
+
+/* Social Icons Section */
+.appsocial-icons {
+  margin-top: 1rem;
+}
+
+.appsocial-icons a {
+  color: #C1A57B;
+  margin: 0 0.5rem;
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.appsocial-icons a:hover {
+  color: #D4AF37;
+}
+
+
+/* Maps */
+.map-section {
+  padding: 2rem 1rem;
+  background-color: #333; /* Dark background */
+  border-radius: 10px;
+  margin: 2rem auto;
+  width: 80%;
+  margin-bottom: 6rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Enhanced shadow for dark theme */
+}
+
+.map-section iframe {
+  border-radius: 10px;
+  filter: invert(90%); /* Dark mode for the embedded map */
+}
+
+/*Our Team*/
+.appour-team {
+  text-align: left;  /* Align the "Our Team" title to the left */
+  margin-left: 20px;  /* Add left margin */
+  margin-bottom: 20px;
+}
+.appour-team h2 {
+  transform: translateX(+5px);
+  position: relative; /* Position relative to add the custom line */
+  margin-top: 25px; /* Remove unnecessary space above */
+  margin-bottom: 10px; /* Add spacing below the header */
+  font-size: 2rem; /* Adjust font size as needed */
+  text-align: left; /* Align text to the left */
+  text-decoration: none; /* Remove any text underline */
+  border: none; /* Remove any extra border */
+}
+
+.appour-team h2::after {
+  content: ""; /* Empty content for the custom line */
+  display: block;
+  width: 50px; /* Width of the line, matching the "Our" text length */
+  height: 4px; /* Thickness of the line */
+  background-color: #6C1E3C; /* Line color */
+  border-radius: 5px;
+  margin-top: 5px; /* Space between the text and the line */
+}
+
+
+
+.appteam-members {
+  display: flex;
+  justify-content: space-between;  /* Distribute the boxes equally */
+  gap: 10px;
+  margin-top: 10px;
+  width: 90%;  /* Set the width of the container to 80% */
+  margin-left: 5%;  /* Center the container by adding 10% margin on the left */
+  margin-right: 5%;  /* Center the container by adding 10% margin on the right */
+}
+
+.appteam-member {
+  width: 250px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #F5F0E1;
+  color: #6C1E3C;
+  font-size: 16px;
+  border: 3px solid #6C1E3C;
+  border-radius: 0;
+  transition: transform 0.3s ease;
+}
+
+.appteam-member:hover {
+  transform: scale(1.05);
+}
+
+.appimage-container {
+  position: relative;
+  width: 100%;
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.appimage-container img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.appimage-container:hover img {
+  transform: scale(1.1); /* Slight zoom effect */
+}
+
+.appsocial-media-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.appimage-container:hover .social-media-container {
+  opacity: 1;
+}
+
+.social-icon {
+  color: #D4AF37;
+  margin: 0 10px;
+  text-decoration: none;
+  font-size: 1.5rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+  color: #0073b1; /* LinkedIn's blue color */
+}
+
+
+.appinfo-container {
+  width: 100%;
+  height: 30%;
+  background-color: #C1A57B;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.appname {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #6C1E3C 
+}
+
+.appdesignation {
+  font-size: 14px;
+  color: black;
+}
+
+/*Post*/
+.post-propertyapp-container {
+  width: 80%;  /* Set the width to 80% */
+  margin-left: 10%;  /* Center the container */
+  margin-right: 10%;  /* Center the container */
+  background-color: #C1A57B;  /* Background color for the container */
+  border-radius: 20px;  /* Circular corners */
+  display: flex;
+  justify-content: space-between;  /* Align content on both sides */
+  padding: 20px;  /* Add padding inside the container */
+  margin-bottom: 30px;  /* Space between this section and "Our Team" */
+}
+
+/*Post property*/
+.left-side {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 60%;
+}
+
+.left-side p {
+  margin: 5px 0;
+  font-size: 16px;
+  color: black;
+}
+
+.left-side h3 {
+  margin: 5px 0;
+  font-size: 16px;
+  color: black;
+}
+
+.right-side {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+}
+
+.post-propertyapp-btn, .free-btn {
+  padding: 10px 15px;
+  font-size: 18px;
+  color: white;
+  background-color: #6C1E3C;
+  border: none;
+  border-radius: 25px;
+  margin-right: 25px;  /* Space between the two buttons */
+  text-align: center;
+  transform: translateX(+10px);
+  display: inline-block;  /* Allow buttons to stay inline */
+  width: auto;  /* Buttons will take as much width as needed */
+}
+
+.free-btn {
+  background-color: #F5F0E1;  /* Different background for the Free button */
+  color: black;
+}
+
+@media only screen and (max-width: 430px) and (max-height: 932px) {
+  .container {
+    padding: 10px; /* Adjust padding for smaller screens */
+  }
+
+  .hero-content h1 {
+    font-size: 1.5rem; /* Scale down hero section title */
+  }
+
+  .hero-content{
+    z-index: 1;
+  }
+
+  .hero-content p {
+    font-size: 0.9rem; /* Adjust paragraph text */
+  }
+
+  .hero-image img {
+    transform: translateX(-350px);
+    z-index: -1; /* Move image behind text */
+  }
+
+  .footer {
+    flex-direction: column; /* Stack footer sections */
+    text-align: center;
+  }
+
+  .footer-section {
+    margin-bottom: 20px;
+  }
+
+  .Bachelor {
+    font-size: 16px; /* Smaller font size for readability */
+    padding: 0.8rem; /* Reduced padding */
+    width: 76%; /* Utilize most of the screen width */
+    transform: translateX(-10px); /* Adjust alignment */
+    height: auto; /* Let height adjust dynamically */
+    margin: 10px auto; /* Center the section with some vertical margin */
+    border-radius: 20px; /* Softer rounded corners */
+  }
+
+  .bac-box {
+    height: auto; /* Dynamic height for flexibility */
+    border-radius: 20px; /* Smaller rounded corners */
+    border-width: 1px; /* Thin border for compact screens */
+  }
+
+  .Bachelor p {
+    font-size: 14px; /* Adjusted font size */
+    margin-left: 10px; /* Reduced left margin */
+    margin-bottom: 5px; /* Tighter spacing */
+  }
+
+  .secnd-line {
+    font-size: 14px; /* Adjust font size */
+    margin-left: 10px; /* Align with adjusted spacing */
+    margin-bottom: 10px; /* Tighter spacing */
+  }
+
+  .third-line {
+    flex-direction: column; /* Stack lines vertically */
+    margin-left: 10px; /* Adjust left margin */
+  }
+
+  .bold {
+    font-size: 14px; /* Adjusted font size */
+    margin-left: 5px; /* Keep minimal margin */
+  }
+
+  .Bachelor a {
+    font-size: 14px; /* Smaller font size for links */
+    margin-top: 15px; /* Reduce top margin */
+    justify-content: center; /* Center-align the link */
+  }
+
+  .Bachelor strong {
+    font-size: 30px; /* Smaller headline font size */
+    margin-bottom: 15px; /* Adjust spacing */
+  }
+
+  .itali {
+    font-size: 14px; /* Adjust italic text size */
+    margin-top: 5px; /* Add some space */
+  }
+
+  .explore-link {
+    font-size: 12px; /* Smaller font size for links */
+  }
+
+  .highlight {
+    font-size: 22px; /* Reduced font size */
+    top: -4px; /* Adjust alignment */
+    margin-left: 5px; /* Reduced margin */
+  }
+
+  @media only screen and (max-width: 430px) and (max-height: 932px) {
+    
+    /* Post-propertyapp container adjustments */
+    .post-propertyapp-container {
+        width: 85%;
+        margin-left: 7.5%;
+        margin-right: 7.5%;
+        background-color: #C1A57B;
+        border-radius: 15px;
+        display: flex;
+        justify-content: space-between;
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+}
+.hero-content h1 {
+  font-size: 1.5rem; /* Scale down hero section title */
+}
+
+.hero-content{
+  z-index: 1;
+}
+
+.hero-content p {
+  font-size: 0.9rem; /* Adjust paragraph text */
+}
+
+.hero-image img {
+  transform: translateX(-350px);
+  z-index: -1; /* Move image behind text */
+}
+
+}
+
+@media screen and (max-width: 430px) and (max-height: 932px) {
+  .projects {
+    padding: 20px 10px; /* Reduce overall padding */
+    background-color: #F5F0E1; /* Keep the background color */
+  }
+
+  .projects h2 {
+    font-size: 1.5rem; /* Reduce font size */
+    transform: translateX(-40px); /* Adjust translation for smaller screens */
+    margin-bottom: 15px; /* Reduce space below the header */
+  }
+
+  .projects h2::after {
+    width: 30px; /* Shorten the line to match smaller text */
+    height: 3px; /* Slightly thinner line */
+    margin-top: 3px; /* Reduce spacing between text and line */
+  }
+
+  .projects h3 {
+    font-size: 1rem; /* Smaller h3 font size */
+    margin-bottom: 3px; /* Reduce space below h3 */
+  }
+
+  .project-cards {
+    grid-template-columns: repeat(2, 1fr); /* Display 2 cards per row */
+    gap: 10px; /* Reduce spacing between cards */
+  }
+
+  .project-card {
+    border-radius: 1rem; /* Slightly smaller border radius */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adjust shadow for smaller cards */
+  }
+
+  .project-image {
+    padding-bottom: 50%; /* Reduce the image size */
+  }
+
+  .project-text {
+    padding: 10px; /* Reduce padding around text */
+  }
+
+  .project-text h3 {
+    font-size: 1.2rem; /* Smaller h3 font size */
+    margin-bottom: 5px; /* Reduce spacing */
+  }
+
+  .project-text p {
+    font-size: 0.9rem; /* Reduce paragraph text size */
+    margin-bottom: 5px; /* Reduce spacing */
+  }
+
+  .project-text span {
+    font-size: 1rem; /* Reduce span font size */
+  }
+}
+
+@media screen and (max-width: 430px) and (max-height: 932px) {
+  .appnewsletter {
+    flex-direction: column; /* Stack content vertically */
+    gap: 10px; /* Reduce spacing between elements */
+    padding: 1rem; /* Reduce padding */
+    height: auto; /* Allow height to adjust to content */
+    margin-bottom: 50px; /* Reduce bottom margin */
+  }
+
+  .appcontent {
+    flex-direction: column; /* Stack apptext and appimage vertically */
+    align-items: center; /* Center-align content */
+    gap: 15px; /* Space between text and image */
+  }
+
+  .apptext {
+    text-align: center; /* Center-align text */
+    flex: none; /* Remove flex constraints */
+    max-width: 90%; /* Adjust text width */
+  }
+
+  .apptext strong {
+    font-size: 1.8rem; /* Reduce font size */
+    margin-bottom: 0.5rem; /* Reduce spacing below */
+  }
+
+  .apptext p {
+    font-size: 0.9rem; /* Reduce font size */
+    margin-bottom: 1rem; /* Reduce spacing */
+  }
+
+  .apptext form {
+    flex-direction: column; /* Stack input and button vertically */
+    align-items: stretch; /* Stretch input and button to full width */
+    gap: 10px; /* Space between input and button */
+    margin-top: 15px; /* Reduce top margin */
+  }
+
+  .apptext input {
+    padding: 10px 15px; /* Adjust padding */
+    font-size: 14px; /* Reduce font size */
+    max-width: 100%; /* Allow input to take full width */
+  }
+
+  .apptext button {
+    padding: 10px 20px; /* Adjust padding */
+    font-size: 14px; /* Reduce font size */
+  }
+
+  .appimage img {
+      transform: translateX(-15px);
+      z-index: -1; /* Move image behind text */
+    }
+}
+
+@media screen and (max-width: 430px) and (max-height: 932px) {
+  .appteam-members {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: center; /* Center-align the items */
+    gap: 15px; /* Slightly increased spacing for better layout */
+  }
+
+  .appteam-member {
+    flex: 1 1 calc(45% - 15px); /* Increase card width to 45% of container */
+    max-width: calc(45% - 15px); /* Ensure it doesn't exceed this width */
+    height: auto; /* Let the height adjust dynamically */
+    min-width: 140px; /* Slightly increased minimum width */
+    padding: 10px; /* Add padding to ensure content fits */
+  }
+
+  .appimage-container {
+    height: 180px; /* Adjust height for better proportion */
+  }
+
+  .appimage-container img {
+    object-fit: cover; /* Keep images proportional */
+    width: 100%;
+    height: 100%;
+  }
+
+  .appinfo-container {
+    padding: 12px; /* Add padding for better spacing */
+    text-align: center;
+    background-color: #C1A57B; /* Retain background color */
+    color: black;
+    width: 95%;
+    transform: translateY(+10px);
+  }
+
+  .appname {
+    font-size: 16px; /* Adjusted for better readability */
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #6c1e3c8c;
+  }
+
+  .appdesignation {
+    font-size: 13px; /* Adjusted font size for smaller screens */
+    line-height: 1.2; /* Added line-height for readability */
+  }
+}
+
+/* Responsive Styling for 430x932 */
+@media screen and (max-width: 430px) and (max-height: 932px) {
+  .usp {
+    padding: 20px 10px; /* Reduce overall padding */
+    background-color: #F5F0E1; /* Match the project section background */
+  }
+
+  .usp h2 {
+    font-size: 1.5rem; /* Adjust heading size to match project section */
+    transform: translateX(-40px); /* Align with the project section heading style */
+    margin-bottom: 15px; /* Reduce spacing below header */
+  }
+
+  .usp h2::after {
+    width: 30px; /* Adjust line width to match heading */
+    height: 3px; /* Adjust line thickness */
+    margin-top: 3px; /* Match spacing between text and line */
+  }
+
+  .usp-stats {
+    display: grid; /* Use grid layout for responsiveness */
+    grid-template-columns: repeat(2, 1fr); /* Display 2 items per row */
+    gap: 10px; /* Space between items */
+    justify-content: center; /* Center the items */
+  }
+
+  .stat-item {
+    width: 100%; /* Full-width for each box */
+    height: auto; /* Dynamic height */
+    border-radius: 1rem; /* Match project card corner radius */
+    overflow: hidden; /* Maintain box bounds */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+  }
+
+  .stat-item img {
+    width: 100%; /* Full-width image */
+    padding-bottom: 50%; /* Adjust image size */
+    object-fit: cover; /* Maintain aspect ratio */
+  }
+
+  .stat-item h3 {
+    font-size: 1.2rem; /* Match font size with project cards */
+    margin: 10px; /* Space around text */
+    line-height: 1.3; /* Adjust line spacing */
+    text-align: left; /* Align text to the left */
+  }
+
+  .stat-item h3:first-child {
+    font-weight: bold; /* Highlight the main stat */
+    margin-bottom: 4px; /* Adjust spacing below the title */
+  }
+
+  .stat-item h3:nth-child(2) {
+    font-size: 0.9rem; /* Smaller font size for description */
+    margin-bottom: 8px; /* Adjust spacing below description */
+    transform: translateY(+20px);
+  }
+
+  .stat-item h3.explore-link {
+    font-size: 0.9rem; /* Adjust link font size */
+    color: #fff; /* Highlighted color */
+    transform: translateY(+60px);
+    margin-top: 5px; /* Reduce spacing above the link */
+    text-align: left; /* Align link text to the left */
+    text-decoration: none; /* Underline for clarity */
+    cursor: pointer; /* Pointer cursor on hover */
+  }
+
+  .stat-item h3.explore-link:hover {
+    color: #4a1228; /* Darker shade on hover */
+  }
+}

@@ -1,0 +1,305 @@
+.infocontainer {
+  display: flex;
+  padding: 20px;
+  background-color: #DFD7BF; /* Light beige background */
+  border-radius: 1.5rem;
+  gap: 20px; /* Gap between left and right sections */
+  height: auto; /* Flexible height to fit content */
+}
+
+.info-left {
+  flex: 1; /* Allow dynamic resizing for responsiveness */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.info-left img {
+  width: 80%; /* Adjust image size for better fit */
+  height: auto;
+  object-fit: cover; /* Maintain image proportion */
+  border-radius: 16px; /* Add rounded corners */
+}
+
+.info-right {
+  flex: 2; /* Right side takes more space */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Spacing between columns */
+}
+
+/* Column Styling */
+.column1 {
+  flex: 1; /* Equal space for both columns */
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Spacing between rows in each column */
+}
+
+/* Row Styling for Column 1 */
+.row {
+  display: flex;
+  gap: 20px; /* Spacing between boxes */
+}
+
+/* Box (Card) Styling */
+.box {
+  position: relative; /* Make the box a positioning context */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  border-radius: 16px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  overflow: hidden; /* Hide any overflow from the image */
+  cursor: pointer;
+  text-align: center;
+  z-index: 1;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.box img {
+  position: absolute; /* Position the image absolutely inside the box */
+  top: 0;
+  left: 0;
+  width: 100%; /* Make the image fill the entire box */
+  height: 100%;
+  object-fit: cover; /* Ensure the image covers the box */
+}
+
+.box h3 {
+  position: relative; /* Keep the text on top of the image */
+  z-index: 0; /* Ensure text stacks above the image */
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+  margin-top: 10px;
+}
+
+/* Large Box Styling (Monetization Box) */
+.box.large {
+  flex: 1;
+  padding: 5px; /* Reduced padding to decrease height */
+  text-align: center;
+}
+
+.box.large img {
+  width: 60%;
+  height: 100%;
+  object-fit: fill; /* Icons fit properly */
+  margin-bottom: 10px;
+}
+
+.box.large h3 {
+  font-size: 15px; /* Slightly smaller font size for height reduction */
+  font-weight: bold;
+  color: #333;
+  margin-top: 10px; /* Adjusted spacing */
+  transform: translateX(+100px);
+}
+
+/* Small Box Styling (Comprehensive Consultancy and AR/VR Property) */
+.box.small {
+  padding: 25px; /* Increased padding for more height */
+  min-height: 150px; /* Ensure the box is visually taller */
+}
+
+.box.small img {
+  width: 100%; /* Slightly larger icons */
+  height: 100%;
+  object-fit: fill;
+}
+
+.box.small h3 {
+  font-size: 15px; /* Slightly larger font size */
+  font-weight: bold;
+  color: #333;
+  margin-top: 12px;
+  transform: translateY(-75px);
+}
+
+/* Column 2 Styling */
+.column2 {
+  display: flex;
+  gap: 20px; /* Space between the sub-columns */
+  flex: 1; /* Ensures it shares equal space with Column 1 */
+}
+/* Sub-column Styling */
+.sub-column {
+  flex: 1; /* Ensures equal width for sub-columns */
+  display: flex;
+  flex-direction: column; /* Stack boxes vertically */
+  gap: 20px; /* Space between boxes in the sub-column */
+}
+
+/* Box (Card) Styling */
+.box {
+  flex: 1; /* Stretches each box to fill the available height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  border-radius: 16px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+  text-align: center;
+}
+
+.box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.box img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill; /* Icons fit properly */;
+}
+
+.box h3 {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+  margin-top: 10px;
+  transform: translateY(-170px);
+}
+
+.box2 {
+  flex: 1; /* Stretches each box to fill the available height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  border-radius: 16px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+  text-align: center;
+}
+
+.box2:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.box2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Icons fit properly */;
+  transform: translateY(+40px);
+}
+
+.box2 h3 {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+  margin-top: 10px;
+  transform: translateY(-335px);
+}
+
+@media screen and (max-width: 430px) and (max-height: 932px) {
+  .infocontainer {
+    flex-direction: column; /* Stack left and right sections vertically */
+    padding: 10px; /* Reduce padding */
+    gap: 10px; /* Reduce gap */
+  }
+
+  .info-left {
+    flex: none; /* Remove dynamic resizing */
+    justify-content: flex-start; /* Align to top */
+  }
+
+  .info-left img {
+    width: 100%; /* Make image take full width */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  .info-right {
+    flex-direction: column; /* Stack columns vertically */
+    gap: 10px; /* Reduce spacing */
+  }
+
+  .column1, .column2 {
+    flex: none; /* Remove equal space distribution */
+    width: 100%; /* Make columns full width */
+  }
+
+  .box, .box2 {
+    padding: 10px; /* Reduce padding */
+    border-radius: 12px; /* Smaller border radius */
+  }
+
+  .box img{
+    width: 100%; /* Adjust image size */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  .box2 img {
+    width: 80%; /* Adjust image size */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  .box h3 {
+    font-size: 12px; /* Smaller font size */
+    margin-top: 5px; /* Reduce margin */
+    transform: translateY(-70px); /* Move heading to the top */
+    position: relative; /* Ensure proper stacking context */
+    z-index: 1; /* Ensure heading appears above other content */
+  }
+  .box2 h3 {
+    font-size: 12px; /* Smaller font size */
+    margin-top: 5px; /* Reduce margin */
+    transform: translateY(-130px); /* Move heading to the top */
+    position: relative; /* Ensure proper stacking context */
+    z-index: 1; /* Ensure heading appears above other content */
+  }
+
+  .box.large {
+    flex: none; /* Remove equal distribution */
+    padding: 15px; /* Adjust padding for larger box */
+    width: 90%; /* Make the box wider */
+    margin: 0 auto; /* Center the box */
+  }
+
+  .box.large img {
+    width: 60%; /* Adjust image size */
+    margin-bottom: 10px; /* Add spacing below image */
+  }
+
+  .box.large h3 {
+    font-size: 14px; /* Slightly larger font */
+    transform: translateX(+90px); /* Bring heading closer to the top */
+  }
+
+  .box.small {
+    min-height: initial; /* Allow box height to adjust to content */
+    padding: 15px; /* Slightly larger padding */
+  }
+
+  .box.small h3{
+    transform: translateY(-30px);
+    min-height: initial; /* Allow box height to adjust to content */
+    padding: 5px; /* Slightly larger padding */
+    font-size: 10px;
+  }
+
+  .box.small img {
+    width: 100%; /* Adjust image size */
+  }
+
+  .sub-column {
+    gap: 10px; /* Reduce spacing between sub-columns */
+  }
+}

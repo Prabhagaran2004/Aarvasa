@@ -1,0 +1,192 @@
+/* Navbar Styling */
+.navbar {
+    margin: 20px;
+    border-radius: 50px; /* Adjusted for a more rounded navbar */
+    background-color: #C1A57B;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+  }
+  
+  .logon {
+    display: flex;
+    align-items: left;
+  }
+  
+  .logon-image {
+    width: 100px;
+    object-fit: contain;
+    transform: translateX(-10px);
+
+  }
+  
+  .menu {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Adjusted for better spacing */
+    transform: translateX(+55px);
+  }
+
+  .menu a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  
+  .menu a:hover {
+    color: #7c4d4d;
+  }
+  
+.profnav {
+    display: flex;
+    margin-left: 20px;
+    transform: translateX(+120px);
+}
+
+.profnav-icon svg {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    display: block;
+  }
+  
+  /* Contact Button */
+  .contact-btn {
+    background-color: #7c4d4d;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .contact-btn:hover {
+    background-color: #5c3434;
+  }
+  
+  /* Responsive Navbar for 430x932 */
+@media screen and (max-width: 430px) and (max-height: 932px) {
+  .navbar {
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    justify-content: space-between;
+    padding: 1rem; /* Reduce padding for compact layout */
+    gap: 10px; /* Add spacing between wrapped items */
+    margin: 0 auto;
+  }
+
+  .logon {
+    flex: 1;
+    justify-content: center;
+    margin-bottom: 10px; /* Space below the logo */
+  }
+
+  .logon-image {
+    width: 80px; /* Shrink the logo for smaller devices */
+    transform: none; /* Center the logo */
+  }
+
+  .menu {
+    flex: 1;
+    justify-content: space-around; /* Spread menu items evenly */
+    transform: none;
+    gap: 10px; /* Adjust gap for menu items */
+  }
+
+  .menu a {
+    font-size: 14px; /* Reduce font size for better fit */
+  }
+
+  .profnav {
+    flex: 1;
+    justify-content: flex-end; /* Align profile icons to the right */
+    transform: none;
+  }
+
+  .profnav-icon svg {
+    width: 25px; /* Shrink icons for smaller screens */
+    height: 25px;
+  }
+
+  /* Add dropdown behavior for 4 items */
+  .menu {
+    flex-direction: column; /* Stack menu items vertically */
+    align-items: center;
+    display: none; /* Hidden by default */
+  }
+
+  .menu.show {
+    display: flex; /* Show when toggled */
+  }
+
+  /* Hamburger Menu for toggle */
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+  }
+
+  .hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    border-radius: 3px;
+    transition: transform 0.3s;
+  }
+
+  .hamburger:hover span {
+    background-color: #7c4d4d;
+  }
+}
+/* End of Navbar Styling */
+/*Seach bar styling*/
+.search-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.search-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.search-button:hover {
+  opacity: 0.8;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+}
+
+.search-input {
+  padding: 4px 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: 120px;
+  height: 20px;
+  outline: none;
+  font-size: 14px;
+}
+
+.search-input:focus {
+  border-color: #7c4d4d;
+}
+.hide-profile {
+  display: none;
+}

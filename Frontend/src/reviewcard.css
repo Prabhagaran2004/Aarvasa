@@ -1,0 +1,157 @@
+.revreviewcard{
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    max-width: 28%;
+    height: auto;
+    background-color:#692034 ;
+    border-radius: 24px;
+    align-self: center;
+    transition: transform 0.3s ease-in-out; 
+  }
+  
+.revreviewcard:hover {
+    transform: scale(1.1); 
+    cursor: pointer; 
+  }
+  
+.revheaderpart{
+    display: flex;
+    flex-direction: row;
+}
+.revcircle{
+    margin-top: 20px ;
+    margin-left: 23px;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    background: #D9D9D9;
+}
+.revnameofuser{
+    margin-top: 20px ;
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+
+}
+.revuser{
+    margin: 0;
+    padding: 0;
+    font-family:"poppins" ;
+    font-weight: 600;
+    font-size: small;
+    color:#FFFFFF ;
+
+}
+.revusername{
+    margin: 0;
+    padding: 0;
+    font-family: "poppins";
+    font-weight:600 ;
+    font-size: smaller;
+    color: #FFFFFF;
+}
+.revreview{
+    font-family: "poppins";
+    font-weight:600 ;
+    color: #FFFFFF;
+    margin-left: 23px;
+    font-size: medium;
+    margin-right: 20px;
+}
+.revlowerpart{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+    align-items: center; 
+    margin-right: 15px; 
+    margin-left: 23px;
+    margin-bottom: 10px;
+}
+.revrating{
+    display: flex;
+    flex-direction: row;
+    margin-left: 4px;
+    gap: 3px;
+    align-items: left;
+    margin-right: 6px;
+}
+.revrating img{
+    width: 20px;
+    align-self: left;
+    height: min-content;
+    margin-top: 0;
+    padding-top: 0;
+    
+}
+.revtime{
+    padding-right:3px;
+    font-family: "poppins";
+    font-weight: 600;
+    font-size: x-small;
+    color: white;
+
+}
+
+@media (max-width: 430px) and (max-height: 932px) {
+    .revreviewcard {
+      width: 90%; /* Fit within the screen width */
+      max-width: 100%;
+      height: auto; /* Allow dynamic height */
+      margin: 1rem auto; /* Center align */
+      padding: 1rem;
+    }
+  
+    .revheaderpart {
+      flex-direction: row;
+      align-items: center; /* Ensure alignment looks neat */
+      gap: 0.8rem; /* Reduce space between items */
+    }
+  
+    .revcircle {
+      margin-top: 0.5rem;
+      margin-left: 0.5rem;
+      width: 35px; /* Smaller circle */
+      height: 35px;
+    }
+  
+    .revnameofuser {
+      margin-top: 0.5rem;
+      margin-left: 0.5rem;
+    }
+  
+    .revuser {
+      font-size: 1rem; /* Adjust font size for smaller screens */
+    }
+  
+    .revusername {
+      font-size: 0.85rem;
+    }
+  
+    .revreview {
+      font-size: 0.9rem; /* Adjust review font */
+      line-height: 1.2; /* Better readability in a limited space */
+      margin: 0.5rem 1rem; /* Reduce margins */
+    }
+  
+    .revlowerpart {
+      flex-direction: row; /* Keep it horizontal */
+      justify-content: space-between;
+      align-items: center;
+      margin: 0.5rem 1rem;
+    }
+  
+    .revrating {
+      gap: 2px; /* Minimize gap between rating icons */
+      margin-bottom: 0.5rem;
+    }
+  
+    .revrating img {
+      width: 15px; /* Reduce icon size */
+    }
+  
+    .revtime {
+      font-size: 0.75rem; /* Reduce time font size */
+    }
+  }
+  
